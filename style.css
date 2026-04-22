@@ -81,4 +81,22 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.podcast-links {
+    display: flex;
+    flex-direction: column; /* This forces the vertical stack */
+    align-items: center;    /* This keeps them centered horizontally */
+    gap: 15px;              /* Space between the rows */
+    margin-top: 20px;
+}
+
+.podcast-links img {
+    width: 200px;           /* Increased width to make them more prominent */
+    height: auto;           /* Maintains aspect ratio so they aren't squished */
+    transition: transform 0.2s;
+}
+
+.podcast-links img:hover {
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
 html { scroll-behavior: smooth; }
