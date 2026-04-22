@@ -67,22 +67,16 @@ section {
 /* Container for your images */
 .photo-gallery {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between the two photos */
+    flex-direction: column; /* Stacks them vertically */
+    align-items: center;    /* Keeps them centered */
+    gap: 30px;              /* Space between the two stacked photos */
     margin-top: 20px;
 }
 
-/* Style for the images themselves */
 .photo-gallery img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    
-    /* ADD THIS LINE: It shifts the crop focus. */
-    /* 'center top' works if your head is near the top edge. */
-    /* 'center 20%' allows you to precisely fine-tune the vertical position. */
-    object-position: center top; 
-    
+    max-width: 100%;        /* Ensures they don't exceed the screen width */
+    width: 400px;           /* Sets a standard base width */
+    height: auto;           /* CRITICAL: Maintains original aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
