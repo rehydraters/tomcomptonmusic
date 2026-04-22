@@ -74,11 +74,17 @@ section {
 
 /* Style for the images themselves */
 .photo-gallery img {
-    width: 300px;        /* Consistent width */
-    height: 300px;       /* Consistent height */
-    object-fit: cover;   /* Crops them nicely so they don't look stretched */
-    border-radius: 8px;  /* Softens the edges */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+    /* ADD THIS LINE: It shifts the crop focus. */
+    /* 'center top' works if your head is near the top edge. */
+    /* 'center 20%' allows you to precisely fine-tune the vertical position. */
+    object-position: center top; 
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 html { scroll-behavior: smooth; }
