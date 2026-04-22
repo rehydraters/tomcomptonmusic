@@ -55,6 +55,10 @@ section {
     align-items: center;
 }
 
+section {
+    scroll-margin-top: 80px; /* This handles the overlapping issue when you click links */
+}
+
 /* 4. Contact Form Clean-up */
 #contact form { 
     display: flex; 
