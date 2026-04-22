@@ -56,7 +56,7 @@ section {
 }
 
 section {
-    scroll-margin-top: 30px; /* This handles the overlapping issue when you click links */
+    scroll-margin-top: 40px; /* This handles the overlapping issue when you click links */
 }
 
 /* 4. Contact Form Clean-up */
