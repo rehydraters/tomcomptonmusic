@@ -4,4 +4,12 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 nav a { color: white; text-decoration: none; }
 section { padding: 100px 20px; min-height: 80vh; }
 #contact form { display: flex; flex-direction: column; max-width: 400px; gap: 10px; }
+body {
+    background-image: url('images/TomComptonRiver.png');
+    background-size: 300px; /* Adjust size so it doesn't overwhelm the text */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the logo stationary while you scroll */
+    opacity: 0.2; /* Makes the logo subtle so it doesn't clash with text */
+}
 html { scroll-behavior: smooth; }
