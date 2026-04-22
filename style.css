@@ -1,15 +1,28 @@
-body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-nav { position: fixed; top: 0; width: 100%; background: #333; padding: 1rem; }
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { color: white; text-decoration: none; }
-section { padding: 100px 20px; min-height: 80vh; }
-#contact form { display: flex; flex-direction: column; max-width: 400px; gap: 10px; }
+/* Ensure the body is positioned so we can place the image behind it */
 body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* This creates a "layer" behind your content */
+body::before {
+    content: "";
+    position: fixed; /* Keeps it fixed while you scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('images/TomComptonRiver.png');
-    background-size: 300px; /* Adjust size so it doesn't overwhelm the text */
+    background-size: 300px; /* Adjust as needed */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Keeps the logo stationary while you scroll */
-    opacity: 0.2; /* Makes the logo subtle so it doesn't clash with text */
+    opacity: 0.15; /* Only affects the image */
+    z-index: -1; /* Pushes the image behind everything else */
 }
-html { scroll-behavior: smooth; }
+
+/* Now your text will remain perfectly solid and readable */
+h1, h2, p {
+    color: #333; /* Or your preferred text color */
+}
