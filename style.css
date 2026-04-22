@@ -1,28 +1,67 @@
-/* Ensure the body is positioned so we can place the image behind it */
-body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+/* Reset basic margins */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: sans-serif; 
+    line-height: 1.6; 
+    position: relative; /* Necessary for the logo layer */
 }
 
-/* This creates a "layer" behind your content */
+/* 1. The Watermark Logo Layer */
 body::before {
     content: "";
-    position: fixed; /* Keeps it fixed while you scroll */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url('images/TomComptonRiver.png');
-    background-size: 300px; /* Adjust as needed */
+    background-size: 300px;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.15; /* Only affects the image */
-    z-index: -1; /* Pushes the image behind everything else */
+    opacity: 0.15;
+    z-index: -1;
 }
 
-/* Now your text will remain perfectly solid and readable */
-h1, h2, p {
-    color: #333; /* Or your preferred text color */
+/* 2. Navigation Styling */
+nav { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: #333; 
+    padding: 1rem;
+    z-index: 1000; /* Keeps nav above the logo */
 }
+
+nav ul { 
+    list-style: none; /* Removes bullet points */
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; /* Centers the links */
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+/* 3. Section Spacing */
+section { 
+    padding: 100px 20px; /* Space top/bottom for the fixed nav */
+    min-height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 4. Contact Form Clean-up */
+#contact form { 
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    max-width: 400px; 
+    gap: 10px; 
+}
+
+html { scroll-behavior: smooth; }
