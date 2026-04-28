@@ -125,4 +125,32 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* The wrapper handles the positioning */
+.bit-wrapper {
+    display: flex;             /* Turns on flexbox */
+    justify-content: center;   /* Centers horizontally */
+    align-items: center;       /* Centers vertically */
+    width: 100%;               /* Spans full width to allow centering */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;      /* Puts them side-by-side */
+    justify-content: center;  /* Centers them horizontally */
+    align-items: center;      /* Centers them vertically */
+    gap: 25px;                /* Space between each icon */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-links img {
+    width: 40px;              /* Adjust this size if you want them bigger/smaller */
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.social-links img:hover {
+    transform: scale(1.15);   /* Slight pop effect on hover */
+}
+
 html { scroll-behavior: smooth; }
